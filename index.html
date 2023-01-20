@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="theme-color" content="#4BD765" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e8027f79c9.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <meta name="theme-color" content="#4BD765">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e8027f79c9.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <title>ILY Sara</title>
-</head>
+  </head>
 
-
-<body>
-
+  <body>
     <header>
-        <a class="skip-to-main-content" href="#main-content">
-            Skip to main content
-        </a>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="/"><img src="/img/heart.webp" alt="Logo"></a>
-            </div>
-            <div class="site-name">
-                <a href="/">
-                    <h4>I LOVE YOU</h4>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                <div class="menu">
-                    <li><a href="/motivazioni">Motivazioni</a></li>
-                    <li><a href="/matrimonio">Matrimonio</a></li>
-                </div>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/"><img src="/img/heart.webp" alt="Logo" /></a>
+        </div>
+        <div class="site-name">
+          <a href="/">
+            <h4>I LOVE YOU</h4>
+          </a>
+        </div>
+        <ul class="nav-links">
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="menu">
+            <li><a>Coming soon</a></li>
+          </div>
+        </ul>
+      </nav>
     </header>
 
-</body>
+    <main class="home-page">
+      <div class="home-banner">
+        <div class="showcase-container">
+            <img src="/img/foto1-h.jpg" alt="Droptop Screenshot" />
+            <div class="home-banner-text">
+                <div class="home-banner-title">
+                    <h1>1 NUOVO MESSAGGIO</h1>
+                    <h2>È presente un nuovo messaggio che non è ancora stato letto</h2>
+                </div>
 
+                <div class="home-button-container">
+                    <button class="new-message-button" onclick="location.href='/valentine-message';" type="button"><img src="img/new-message.png" /></button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
