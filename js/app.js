@@ -10,7 +10,7 @@ const animationTimeline = () => {
   
     hbd.innerHTML = `<span>${hbd.innerHTML
       .split("")
-      .join("</span><span>")}</span`;
+      .join("</span> <span>")}</span`;
   
     const ideaTextTrans = {
       opacity: 0,
@@ -35,10 +35,6 @@ const animationTimeline = () => {
         opacity: 0,
         y: 10,
       })
-      .from(".two", 0.4, {
-        opacity: 0,
-        y: 10,
-      })
       .to(
         ".one",
         0.7,
@@ -48,6 +44,12 @@ const animationTimeline = () => {
         },
         "+=2.5"
       )
+
+
+      .from(".two", 0.7, {
+        opacity: 0,
+        y: 10,
+      })
       .to(
         ".two",
         0.7,
@@ -55,12 +57,13 @@ const animationTimeline = () => {
           opacity: 0,
           y: 10,
         },
-        "-=1"
+        "+=2"
       )
+
+
       .from(".three", 0.7, {
         opacity: 0,
         y: 10,
-        // scale: 0.7
       })
       .to(
         ".three",
@@ -71,6 +74,8 @@ const animationTimeline = () => {
         },
         "+=2"
       )
+
+      
       .from(".four", 0.7, {
         scale: 0.2,
         opacity: 0,
@@ -131,7 +136,7 @@ const animationTimeline = () => {
         ".idea-5 span",
         0.7,
         {
-          rotation: 90,
+          rotation: -90,
           x: 8,
         },
         "+=0.4"
@@ -168,6 +173,12 @@ const animationTimeline = () => {
         0.2,
         "+=1"
       )
+      .from(".idea-7", 0.7, ideaTextTrans)
+      .to(".idea-7", 0.7, ideaTextTransLeave, "+=1.5")
+      .from(".idea-8", 0.7, ideaTextTrans)
+      .to(".idea-8", 0.7, ideaTextTransLeave, "+=1.5")
+      .from(".idea-9", 0.7, ideaTextTrans)
+      .to(".idea-9", 0.7, ideaTextTransLeave, "+=1.5")
       .staggerFromTo(
         ".baloons img",
         2.5,
@@ -205,9 +216,6 @@ const animationTimeline = () => {
         {
           opacity: 0,
           y: -50,
-          // scale: 0.3,
-          rotation: 150,
-          skewX: "30deg",
           ease: Elastic.easeOut.config(1, 0.5),
         },
         0.1
@@ -217,11 +225,9 @@ const animationTimeline = () => {
         0.7,
         {
           scale: 1.4,
-          rotationY: 150,
         },
         {
           scale: 1,
-          rotationY: 0,
           color: "#ff69b4",
           ease: Expo.easeOut,
         },
@@ -250,29 +256,7 @@ const animationTimeline = () => {
         },
         0.3
       )
-      .to(".six", 0.5, {
-        opacity: 0,
-        y: 30,
-        zIndex: "-1",
-      })
-      .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
-      .to(
-        ".last-smile",
-        0.5,
-        {
-          rotation: 90,
-        },
-        "+=1"
-      );
-  
-    // tl.seek("currentStep");
-    // tl.timeScale(2);
-  
-    // Restart Animation on click
-    const replyBtn = document.getElementById("replay");
-    replyBtn.addEventListener("click", () => {
-      tl.restart();
-    });
+      
   };
 
 
