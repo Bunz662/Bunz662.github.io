@@ -573,6 +573,10 @@ input[type="checkbox"] {
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
+
+    animation-name: bell-ring;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .new-message-button img {
@@ -581,6 +585,21 @@ input[type="checkbox"] {
   height: auto;
   cursor: pointer;
   filter: brightness(100%);
+}
+
+@keyframes bell-ring {
+  5%, 15% {
+    transform: rotate(25deg);
+  }
+  10%, 20% {
+    transform: rotate(-25deg);
+  }
+  25%  {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 
