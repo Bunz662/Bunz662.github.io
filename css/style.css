@@ -3,7 +3,7 @@
 
 :root {
   --main-bg-color: #fcc9d1;
-  --main-bg-color: white;
+  --main-bg-color: black;
   --main-bg-color-tr: #22222d9b;
   --main-bg-highlight-tr: #393939b6;
   --secondary-bg-color: #000000;
@@ -365,6 +365,7 @@ html {
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 .important {
